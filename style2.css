@@ -1,7 +1,7 @@
 body{
-    background-color: whitesmoke;
-    color: rgb(0, 0, 0);
-    font-family: Aldhabi;
+    background-color: rgb(109, 185, 247);
+    color: white;
+    font-family: Freestyle Script;
     text-align: center;
     
 }
@@ -107,7 +107,7 @@ img {
     color: rgb(0, 0, 0);
     
     padding: 7vw 3.5vw;
-    font-size: 1.4vw;
+    font-size: 20px;
     text-align: center;
 }
 
