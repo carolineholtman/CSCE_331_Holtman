@@ -16,6 +16,19 @@ h1{
 h2{
     font-size: 35px;
 }
+h3{
+    font-size: 28px;
+}
+h4{
+    font-size: 20px;
+}
+h5{
+    text-align: left;
+    font-size: 35px;
+}
+h6{
+    font-size: 18px;
+}
 
 img {
     border: 5px solid #000000;
@@ -25,7 +38,6 @@ img {
 
 .topnav{
     background-color: rgb(109, 185, 247);
-
 
     
     height: 100px;
@@ -52,6 +64,8 @@ img {
 
 }
 
+
+
 .topnav a:hover{
     background-color: whitesmoke;
     color: black;
@@ -69,7 +83,7 @@ img {
 .navbar{
     background-color: rgb(109, 185, 247);
 
-
+    
     
     height: 350px;
     
@@ -79,10 +93,236 @@ img {
 
 }
 
+#pges{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#nme{
+    justify-content: left;
+}
+
 .navbar a{
     color: rgb(0, 0, 0);
     
     padding: 70px 35px;
     font-size: 20px;
     text-align: center;
+}
+
+#toptable{
+    width: "100%";
+    
+}
+
+#cen{
+    align-items: center;
+    text-align: center;
+}
+
+#lft{
+    align-items: "left";
+}
+
+#rght{
+    align-items: "right";
+}
+
+
+
+#hdshot{
+    width: 500px;
+    height: auto;
+    alt: "Professional Headshot";
+    margin-right: 15px;
+    margin-left: 250px;
+    align-items:"left";
+}
+
+#topOfLanding{
+    display: flex;
+    align-items: flex-end;
+}
+
+#header{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 195px;
+    line-height: .2;
+}
+
+#abtMe{
+    width: 67%;
+    align-content: center;
+    align-self: center;
+    
+    text-align:left;
+    place-items: center;
+    margin:auto;
+}
+
+#checkers{
+    alt: "Checker's Board";
+    width: 200px;
+    height: auto;
+    
+}
+
+#tech{
+    width: 50%;
+    align-content: center;
+    align-self: center;
+    
+    text-align: center;
+    place-items: center;
+    margin:auto;
+}
+
+#ttt{
+    alt: "Tic Tac Toe Board";
+    width: 250px;
+    height: auto;
+}
+
+#wordle{
+    alt: "Wordle Board";
+    width: 200px;
+    height: auto;
+}
+
+#github{
+    alt: "Github Logo";
+    width: 200px;
+    height: auto;
+}
+
+#bottomBar{
+    width: 20%;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    place-items: center;
+    margin:auto;
+}
+
+#linkedIn{
+    alt: "LinkedIn Logo";
+    width: 30px;
+    height: auto;
+}
+
+#gthb{
+    alt: "Github Logo";
+    width: 30px;
+    height: auto;
+}
+
+#insta{
+    alt: "Instagram Logo";
+    width: 30px;
+    height: auto;
+}
+
+#service{
+    width: 55%;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    place-items: center;
+    margin:auto;
+}
+
+#SECLogo{
+    alt: "SEC Logo";
+    width: 300px;
+    height: auto;
+}
+
+#RylliesLogo{
+    alt: "Ryllies Logo";
+    width: 200px;
+    height: auto;
+}
+
+#FishCampLogo{
+    alt: "Fish Camp Logo";
+    width: 200px;
+    height: auto;
+}
+
+#BigEventLogo{
+    alt: "Big Event Logo";
+    width: 250px;
+    height: auto;
+}
+
+#FORMELogo{
+    alt: "FORME Logo";
+    width: 200px;
+    height: auto;
+}
+
+#resume{
+    width: 60%;
+    height: 1100px;
+}
+
+#qualifications{
+    width: 55%;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    place-items: center;
+    margin:auto;
+}
+
+#tggle{
+    justify-content: right;
+    margin-right: 20px;
+}
+
+.toggle {
+    position : relative ;
+    display : inline-block;
+    width : 70px;
+    height : 35px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+      
+
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 80%;
+    background-color: rgb(109, 185, 247);
+    border: 2px solid black;
+    top: 1px; 
+    left: 1px;
+    transition:  all 0.25s;
+}
+
+
+  
+/* Checkbox checked effect */
+.checkbox:checked + .toggle::after {
+    left : 36px; 
+}
+      
+/* Checkbox checked toggle label bg color */
+.checkbox:checked + .toggle {
+    background-color: rgb(189, 221, 247);
+}
+      
+.checkbox { 
+    display : none;
+}
+
+#link{
+    text-decoration: underline;
 }

@@ -3,48 +3,291 @@
 <html>
     <head>
         <link id="aiStyleSheet" rel="stylesheet" href="style1.css"/>
-        <title>AI Generated Page</title>
+        <title>Tic Tac Toe</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
         
+
+        <style>
+          /* Basic styles for the game board */
+          .game-board {
+              display: grid;
+              grid-template-columns: repeat(3, 100px);
+              grid-template-rows: repeat(3, 100px);
+              gap: 5px;
+              margin: 20px auto;
+              width: 320px;
+              border: 2px solid #000;
+          }
+  
+          .game-cell {
+              width: 100px;
+              height: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 2em;
+              cursor: pointer;
+              border: 1px solid #000;
+              background-color: #f0f0f0;
+          }
+  
+          .game-cell:hover {
+              background-color: #ddd;
+          }
+  
+          .message {
+              text-align: center;
+              font-size: 1.2em;
+              margin-top: 20px;
+          }
+
+          .reset-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .reset-button:hover {
+            background-color: #0056b3;
+        }
+
+        .textbox-container {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1000px; /* Increased maximum width */
+            text-align: center; /* Center-aligns the label */
+        }
+
+        .textbox-container label {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .textbox {
+            width: 100%;
+            height: 300px; /* Increased height */
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            white-space: pre-wrap; /* Preserves formatting */
+            overflow: auto;
+        }
+      </style>
+
     </head>
 
     <body>
+      <ul class="topnav" >
+        <div id="nme"><h2>Caroline Holtman</h2></div>
+        <div id="pges">
+        <a href="./index.html">Home</a>
+        <a href="./technical.html">Technical Portfolio</a>
+        <a href="./qualifications.html">Qualifications</a>
+        <a href="./service.html">Service</a>
+        <a href="./ai.html">Tic Tac Toe</a>
+        </div>
+        <div id="tggle">
+          <input type="checkbox" id="tog" class="checkbox">
+          <label for="tog" class="toggle"></label>
+        </div>
+      </ul>
+
+      <div class="game-board">
+        <div class="game-cell" data-index="0"></div>
+        <div class="game-cell" data-index="1"></div>
+        <div class="game-cell" data-index="2"></div>
+        <div class="game-cell" data-index="3"></div>
+        <div class="game-cell" data-index="4"></div>
+        <div class="game-cell" data-index="5"></div>
+        <div class="game-cell" data-index="6"></div>
+        <div class="game-cell" data-index="7"></div>
+        <div class="game-cell" data-index="8"></div>
+    </div>
+    <button class="reset-button" id="resetButton">Reset Game</button>
+    <div class="message" id="message">Your turn!</div>
+
+    <script>
+        // JavaScript for the Tic Tac Toe game
+        const cells = document.querySelectorAll('.game-cell');
+        const messageEl = document.getElementById('message');
+        let board = ['', '', '', '', '', '', '', '', ''];
+        let currentPlayer = 'X';
+        let gameActive = true;
+
+        const winPatterns = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ];
+
+        function checkWin() {
+            for (const pattern of winPatterns) {
+                const [a, b, c] = pattern;
+                if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+                    return board[a];
+                }
+            }
+            return board.includes('') ? null : 'T';
+        }
+
+        function handleClick(event) {
+            const index = event.target.dataset.index;
+            if (!gameActive || board[index]) return;
+
+            board[index] = currentPlayer;
+            event.target.textContent = currentPlayer;
+
+            const winner = checkWin();
+            if (winner) {
+                gameActive = false;
+                if (winner === 'T') {
+                    messageEl.textContent = "It's a tie!";
+                } else {
+                    messageEl.textContent = `Player ${winner} wins!`;
+                }
+                return;
+            }
+
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            if (currentPlayer === 'O') {
+                setTimeout(computerMove, 500);
+            } else {
+                messageEl.textContent = "Your turn!";
+            }
+        }
+
+        function computerMove() {
+            const emptyIndices = board.map((val, index) => val === '' ? index : null).filter(index => index !== null);
+            const move = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
+            board[move] = 'O';
+            cells[move].textContent = 'O';
+            
+            const winner = checkWin();
+            if (winner) {
+                gameActive = false;
+                if (winner === 'T') {
+                    messageEl.textContent = "It's a tie!";
+                } else {
+                    messageEl.textContent = `Player ${winner} wins!`;
+                }
+            } else {
+                currentPlayer = 'X';
+                messageEl.textContent = "Your turn!";
+            }
+        }
+
+        function resetGame() {
+            board = ['', '', '', '', '', '', '', '', ''];
+            currentPlayer = 'X';
+            gameActive = true;
+            cells.forEach(cell => cell.textContent = '');
+            messageEl.textContent = "Your turn!";
+        }
+
+        cells.forEach(cell => cell.addEventListener('click', handleClick));
+        resetButton.addEventListener('click', resetGame);
+    </script>
+        
+
+      <!-- Textbox for AI Prompt -->
+    <div class="textbox-container">
+      <label for="aiPrompt" class="message">ORIGINAL AI PROMPT:</label>
+      <textarea id="aiPrompt" class="textbox" readonly>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en"></html>
+<html>
+  <head>
+      <link id="aiStyleSheet" rel="stylesheet" href="style1.css"/>
+      <title>AI Generated Page</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+
+  <body>
+    <ul class="topnav" >
+      <div id="nme"><h2>Caroline Holtman</h2></div>
+      <div id="pges">
+      <a href="./index.html">Home</a>
+      <a href="./technical.html">Technical Portfolio</a>
+      <a href="./qualifications.html">Qualifications</a>
+      <a href="./service.html">Service</a>
+      <a href="./ai.html">AI Generated Page</a>
+      </div>
+    </ul>
+
+    <ul class="navbar">
+      <table id="bottomBar">
+        <tr>
+          <td></td>
+          <td id="cen"><h2>Contact Information</h2></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td id="cen"><a href="mailto: carolineholtman@tamu.edu">carolineholtman@tamu.edu</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td id="cen"><h3>(325)234-4943</h3></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td id="bot"><a href="http://linkedin.com/in/caroline-holtman-48a093254" target=_blank><img src="Pictures/linkedin.png" id="linkedIn"></a></td>
+          <td id="cen"><a href="https://github.com/carolineholtman" target="_blank"><img src="Pictures/github.png" id="gthb"></a></td>
+          <td id="cen"><a href="https://www.instagram.com/carolineholtman/" target="_blank"><img src="Pictures/insta.png" id="insta"></a></td>
+        </tr>
+      </table>
+  </ul>
+
+  </body>
+</html>
 
 
-        <ul class="topnav" align="center">
-            <a href="./index.html">Home</a>
-            <a href="./technical.html">Technical Portfolio</a>
-            <a href="./qualifications.html">Qualifications</a>
-            <a href="./service.html">Service</a>
-            <a href="./ai.html">AI Generated Page</a>
-        </ul>
-        <p>Caroline Holtman AI Page</p>
+add a tic tac toe game to the above code where a user can play against the computer with no graphics.
+      </textarea>
+  </div>
 
-        <ul class="navbar" align="center">
-            <table width="20%" border="0" cellspacing="0" cellpadding="10">
-              <tr>
-                <td></td>
-                <td align="center"><h2>Contact Information</h2></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td align="center"><a href="mailto: carolineholtman@tamu.edu">carolineholtman@tamu.edu</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td align="center"><h3>(325)234-4943</h3></td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td align="center"><a href="http://linkedin.com/in/caroline-holtman-48a093254" target=_blank><img src="C:\Users\carol\OneDrive\Documents\CSCE 331\linkedin.png" alt="LinkedIn Logo" width="30" height="30"></a></td>
-                <td align="center"><a href="https://github.com/carolineholtman" target="_blank"><img src="C:\Users\carol\OneDrive\Documents\CSCE 331\github.png" alt="Github Logo" width="30" height="30"></a></td>
-                <td align="center"><a href="https://www.instagram.com/carolineholtman/" target="_blank"><img src="C:\Users\carol\OneDrive\Documents\CSCE 331\insta.png" alt="Instagram Logo" width="30" height="30"></a></td>
-              </tr>
-            </table>
-      
-          </ul>
+
+ 
+
+      <ul class="navbar">
+        <table id="bottomBar">
+          <tr>
+            <td></td>
+            <td id="cen"><h2>Contact Information</h2></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td id="cen"><a href="mailto: carolineholtman@tamu.edu">carolineholtman@tamu.edu</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td id="cen"><h3>(325)234-4943</h3></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="bot"><a href="http://linkedin.com/in/caroline-holtman-48a093254" target=_blank><img src="Pictures/linkedin.png" id="linkedIn"></a></td>
+            <td id="cen"><a href="https://github.com/carolineholtman" target="_blank"><img src="Pictures/github.png" id="gthb"></a></td>
+            <td id="cen"><a href="https://www.instagram.com/carolineholtman/" target="_blank"><img src="Pictures/insta.png" id="insta"></a></td>
+          </tr>
+        </table>
+    </ul>
 
     </body>
 </html>
