@@ -83,14 +83,29 @@ img {
 .navbar{
     background-color: rgb(109, 185, 247);
 
+    height: auto;
     
+    margin-top: 0;
     
-    height: 24vw;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
     
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    
+    list-style-type: none;
 
+}
+
+#bottomLogos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #pges{
@@ -106,9 +121,19 @@ img {
 .navbar a{
     color: rgb(0, 0, 0);
     
-    padding: 7vw 3.5vw;
+    padding: .1rem .5rem;
     font-size: 1.4vw;
     text-align: center;
+    list-style-type: none;
+    font-size: smaller;
+    
+}
+
+.navbar h2, .navbar h3{
+    line-height: .3;
+    margin: 8;
+    padding: 8;
+    
 }
 
 #toptable{
@@ -287,34 +312,36 @@ img {
     position : relative ;
     display : inline-block;
     width : 4.5vw;
-    height : 2.2vw;
+    height : 2.1vw;
     background-color: whitesmoke;
     border-radius: 3vw;
-    border: 2px solid black;
+    border: .2vw solid black;
+    margin-right: 0vw;
 }
       
 
 .toggle:after {
     content: '';
     position: absolute;
-    width: 1.9vw;
-    height: 1.9vw;
-    border-radius: 80%;
+    width: 1.8vw;
+    height: 1.8vw;
+    border-radius: 100%;
     background-color: rgb(109, 185, 247);
-    border: 2px solid black;
-    top: 1px; 
-    left: 1px;
+    border: .2vw solid black;
+    margin-bottom: .01vw;
+    left: 0vw; 
     transition:  all 0.25s;
 }
 
 
-  
-/* Checkbox checked effect */
 .checkbox:checked + .toggle::after {
-    left : 2.3vw; 
+    left : 2.4vw; 
+    width: 1.8vw;
+    height: 1.8vw;
+    border: .2vw;
+    border: .2vw solid black;
 }
       
-/* Checkbox checked toggle label bg color */
 .checkbox:checked + .toggle {
     background-color: rgb(189, 221, 247);
 }

@@ -1,6 +1,7 @@
 body{
-    background-color: rgb(109, 185, 247);
-    color: white;
+    background-color: rgb(193, 249, 214);
+    background-image: url('Pictures/flowerbackground.jpg');
+    color: black;
     font-family: Freestyle Script;
     text-align: center;
     
@@ -10,14 +11,14 @@ a {
 }
 
 h1{
-   font-size: 4.6vw; 
+   font-size: 8vw; 
 }
 
 h2{
-    font-size: 2.5vw;
+    font-size: 5vw;
 }
 h3{
-    font-size: 2.25vw;
+    font-size: 3vw;
 }
 h4{
     font-size: 1.25vw;
@@ -27,7 +28,7 @@ h5{
     font-size: 3.5vw;
 }
 h6{
-    font-size: 1.2vw;
+    font-size: 1.3vw;
 }
 
 img {
@@ -37,18 +38,23 @@ img {
 
 
 .topnav{
-    background-color: rgb(109, 185, 247);
-
     
-    height: 7vw;
+    /*background-image: url('Pictures/flowertop.png');*/
+    background-size: cover;
+    background-position: center 5%;
+    
+    
+    height: 17vw;
     
     display: flex;
     justify-content: center;
     align-items: center;
 
-    
+}
 
-
+.topnav::before{
+    background: url('Pictures/flowertop.png');
+    filter:opacity(1);
 }
 
 .topnav a{
@@ -56,9 +62,11 @@ img {
     color: rgb(0, 0, 0);
     
     padding: 5vw 2.5vw;
-    font-size: 1.25vw;
-    text-align: center;
+    font-size: 3vw;
     
+    font-weight: bold;
+    text-align: center;
+    opacity: 1;
 
     
 
@@ -67,9 +75,14 @@ img {
 
 
 .topnav a:hover{
-    background-color: whitesmoke;
+    
+    background-image: url('Pictures/flowerselect.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     color: black;
-    font-size: 1.8vw;
+    font-size: 3vw;
+    opacity: 5;
 }
 
 .topnav a.active{
@@ -81,16 +94,35 @@ img {
 
 
 .navbar{
-    background-color: rgb(109, 185, 247);
+    
 
+    /*background-image: url('Pictures/flowerbottom.png');*/
+    background-size: cover;
+    background-position: bottom;
+
+    margin-top: 0;
     
-    
-    height: 24vw;
+
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    
+    list-style-type: none;
 
+}
+
+#bottomLogos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2vw;
 }
 
 #pges{
@@ -105,10 +137,32 @@ img {
 
 .navbar a{
     color: rgb(0, 0, 0);
+
+    display: flex;
+    flex-direction: column;
     
-    padding: 7vw 3.5vw;
-    font-size: 20px;
+    justify-content: center;
+
+    
+    padding: .1rem .5rem;
+
+    margin-bottom: 4.5vw;
+    
     text-align: center;
+    line-height: .01;
+    font-size: larger;
+}
+
+.navbar h3{
+    margin: 2;
+    padding: -2;
+    line-height: .5;
+}
+
+.navbar h2{
+    margin: 3;
+    padding: 3;
+    line-height: 2;
 }
 
 #toptable{
@@ -132,36 +186,83 @@ img {
 
 
 #hdshot{
-    width: 30vw;
+    clip-path: circle(42% at 50% 50%);
+    
+    width: 40vw;
     height: auto;
     alt: "Professional Headshot";
-    margin-right: 3vw;
-    margin-left: 16.5vw;
-    align-items:"left";
+    
+    padding-top: 0;
+
+    border: 8vw solid rgb(255, 14, 118); /* Circular border */
+    border-radius: 50%;
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index:1;
+
+
 }
+
+
+
+
+
+
 
 #topOfLanding{
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 20%;
 }
 
 #header{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 10vw;
+    
+    background-image: url('Pictures/frame.png');
+    background-position: center -25%;
+    background-repeat: no-repeat;
+    
+    background-size: 60% 39vw;
+    
+    height: 50vw;
+    width:100%;
+    text-align: center;
+    padding-top: 4vw;
+    margin: 0;
+    margin-top: 25vw;
     line-height: .2;
+    position: relative;
+    z-index: 2;
+
 }
 
 #abtMe{
-    width: 67%;
-    align-content: center;
-    align-self: center;
+    width: 65%;
+    align-content: center top;
+    align-self: center top;
     
-    text-align:left;
-    place-items: center;
+    text-align: center -100%;
+    place-items: center top;
     margin:auto;
+    margin-top: -24vw;
+    font-family: Bell MT;
+    
 }
+
+#abtMe h6{
+    background-color: rgb(193, 249, 214);
+}
+
+#abtMe h2{
+    background-color: rgb(193, 249, 214)
+}
+
+
 
 #checkers{
     alt: "Checker's Board";
@@ -199,12 +300,16 @@ img {
 }
 
 #bottomBar{
-    width: 20%;
-    align-content: center;
-    align-self: center;
+    line-height: .2;
+    width: 55%;
+    align-content: bottom -25%;
+    align-self: bottom;
     text-align: center;
-    place-items: center;
+    place-items: bottom;
     margin:auto;
+    padding: -5vw;
+    margin-bottom: 0%;
+
 }
 
 #linkedIn{
@@ -287,34 +392,36 @@ img {
     position : relative ;
     display : inline-block;
     width : 4.5vw;
-    height : 2.2vw;
+    height : 2.1vw;
     background-color: whitesmoke;
     border-radius: 3vw;
-    border: 2px solid black;
+    border: .2vw solid black;
+    margin-right: 0vw;
 }
       
 
 .toggle:after {
     content: '';
     position: absolute;
-    width: 1.9vw;
-    height: 1.9vw;
-    border-radius: 80%;
+    width: 1.8vw;
+    height: 1.8vw;
+    border-radius: 100%;
     background-color: rgb(109, 185, 247);
-    border: 2px solid black;
-    top: 1px; 
-    left: 1px;
+    border: .2vw solid black;
+    margin-bottom: .01vw;
+    left: 0vw; 
     transition:  all 0.25s;
 }
 
 
-  
-/* Checkbox checked effect */
 .checkbox:checked + .toggle::after {
-    left : 2.3vw; 
+    left : 2.4vw; 
+    width: 1.8vw;
+    height: 1.8vw;
+    border: .2vw;
+    border: .2vw solid black;
 }
       
-/* Checkbox checked toggle label bg color */
 .checkbox:checked + .toggle {
     background-color: rgb(189, 221, 247);
 }
