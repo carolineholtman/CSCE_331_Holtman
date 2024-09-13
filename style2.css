@@ -1,8 +1,8 @@
 body{
-    background-color: rgb(193, 249, 214);
+    background-color: EABEC3;
     background-image: url('Pictures/flowerbackground.jpg');
     color: black;
-    font-family: Freestyle Script;
+    font-family: Baskerville Old Face;
     text-align: center;
     
 }
@@ -15,7 +15,7 @@ h1{
 }
 
 h2{
-    font-size: 5vw;
+    font-size: 4.5vw;
 }
 h3{
     font-size: 3vw;
@@ -62,8 +62,10 @@ img {
     color: rgb(0, 0, 0);
     
     padding: 5vw 2.5vw;
-    font-size: 3vw;
+    font-size: 2.7vw;
     
+    margin-top: 3vw;
+
     font-weight: bold;
     text-align: center;
     opacity: 1;
@@ -76,10 +78,11 @@ img {
 
 .topnav a:hover{
     
-    background-image: url('Pictures/flowerselect.png');
-    background-size: contain;
+    background-image: url('Pictures/frameSelect.webp');
+    background-size: 17vw 15vw;
     background-repeat: no-repeat;
     background-position: center;
+    margin-bottom: 2vw;
     color: black;
     font-size: 3vw;
     opacity: 5;
@@ -223,18 +226,14 @@ img {
 
 #header{
     
-    background-image: url('Pictures/frame.png');
-    background-position: center -25%;
-    background-repeat: no-repeat;
     
-    background-size: 60% 39vw;
     
     height: 50vw;
     width:100%;
     text-align: center;
     padding-top: 4vw;
     margin: 0;
-    margin-top: 25vw;
+    margin-top: 29vw;
     line-height: .2;
     position: relative;
     z-index: 2;
@@ -255,11 +254,19 @@ img {
 }
 
 #abtMe h6{
-    background-color: rgb(193, 249, 214);
+    
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+    background-color: EABEC3;
 }
 
 #abtMe h2{
-    background-color: rgb(193, 249, 214);
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+    
 }
 
 #tech{
@@ -275,11 +282,519 @@ img {
 
 }
 
+#service{
+    width: 100%;
+    align-content: center;
+    align-self: center;
+    
+    text-align: center;
+    place-items: center;
+    margin:auto;
+    margin-top: 0%;
+    justify-content: space-evenly;
+    padding: -3vw;
+
+}
+
+#service h1{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#secService{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#secPicandTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#envision{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#envision h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+
+#diSaturday{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#diSaturday h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#rylliesService{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#rylliesPicandTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#rb3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#rb3 h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#rb3 h4{
+    margin: 1vw 5vw;
+    font-size: 2vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+
+}
+
+
+#waterford{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#waterford h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#waterford h4{
+    margin: 1vw 5vw;
+    font-size: 1.75vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+
+}
+
+#formeService{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#formePicandTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#beautifulAbilities{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#beautifulAbilities h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#beautifulAbilities h4{
+    margin: 1vw 5vw;
+    font-size: 2vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+
+}
+
+
+#serviceRetreat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#serviceRetreat h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#serviceRetreat h4{
+    margin: 1vw 5vw;
+    font-size: 1.75vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+
+}
+
+#shackathon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#shackathon h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#shackathon h4{
+    margin: 1vw 5vw;
+    font-size: 1.75vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+
+}
+
+
+#fishCampService{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#fishCampPicAndTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+    margin-right: 10vw;
+}
+
+#bergman{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#bergman h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#bergman h4{
+    margin: 1vw 5vw;
+    font-size: 2vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+
+}
+
+
+#little{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#little h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#little h4{
+    margin: 1vw 5vw;
+    font-size: 1.75vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+
+}
+
+#bigEventService{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#bigEventPicandTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+    margin-right: 10vw;
+}
+
+#staffAssistant{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#staffAssistant h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#staffAssistant h4{
+    margin: 1vw 5vw;
+    font-size: 2vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+
+}
+
+
+#volunteer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-self: center;
+    padding: 100;
+    margin-left: auto;
+    padding-left: 10vw;
+    text-align: center;
+    place-items: center;
+}
+
+#volunteer h3{
+    margin: 0 5vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+}
+
+#volunteer h4{
+    margin: 1vw 5vw;
+    font-size: 1.75vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+
+}
+
+#checkers {
+    margin-right: 5vw;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+    alt: "Checker's Board";
+    width: 18vw;
+    height: auto;
+}
+
+#secService h2 {
+    margin: 0 5vw;
+    
+
+}
+
+#secService h4 {
+    margin: 1vw 5vw;
+    font-size: 1.75vw;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+
+}
+
+
 #tech h1 {
     margin: 0 5vw;
-    background-color: rgb(193, 249, 214);
+    background-color: EABEC3;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
 
 }
@@ -296,12 +811,13 @@ img {
     padding-left: 10vw;
     text-align: center;
     place-items: center;
+
 }
 
 #checkers {
     margin-right: 5vw;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
     alt: "Checker's Board";
     width: 18vw;
@@ -310,19 +826,19 @@ img {
 
 #techCheckers h2 {
     margin: 0 5vw;
-    background-color: rgb(193, 249, 214);
+    background-color: EABEC3;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
 
 }
 
 #techCheckers h4 {
     margin: 1vw 5vw;
-    font-size: 1.75vw;
-    background-color: rgb(193, 249, 214);
+    font-size: 1.25vw;
+    background-color: EABEC3;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
 
 }
@@ -343,7 +859,7 @@ img {
 #ttt {
     margin-right: 10vw;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
     alt: "Tic Tac Toe Board";
     width: 18vw;
@@ -352,9 +868,9 @@ img {
 
 #techTTT h2 {
     margin: 0 5vw;
-    background-color: rgb(193, 249, 214);
+    background-color: EABEC3;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
     font-size: 3.5vw;
 
@@ -362,10 +878,10 @@ img {
 
 #techTTT h4 {
     margin: 1vw 5vw;
-    font-size: 1.75vw;
-    background-color: rgb(193, 249, 214);
+    font-size: 1.25vw;
+    background-color: EABEC3;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
 
 }
@@ -386,7 +902,7 @@ img {
 #wordle {
     margin-right: 5vw;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
     alt: "Wordle Board";
     width: 18vw;
@@ -395,9 +911,9 @@ img {
 
 #techWordle h2 {
     margin: 0 5vw;
-    background-color: rgb(193, 249, 214);
+    background-color: EABEC3;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
     font-size: 3.5vw;
 
@@ -405,10 +921,10 @@ img {
 
 #techWordle h4 {
     margin: 1vw 5vw;
-    font-size: 1.75vw;
-    background-color: rgb(193, 249, 214);
+    font-size: 1.25vw;
+    background-color: EABEC3;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
 
 }
@@ -430,19 +946,19 @@ img {
 #github {
     margin-right: 10vw;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
     alt: "Github Board";
     width: 18vw;
     height: auto;
-    background-color: rgb(193, 249, 214);;
+    background-color: EABEC3;
 }
 
 #techWebsite h2 {
     margin: 0 5vw;
-    background-color: rgb(193, 249, 214);
+    background-color: EABEC3;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
     font-size: 3.5vw;
 
@@ -451,10 +967,10 @@ img {
 #techWebsite h4 {
     margin: 1vw 2vw;
     margin-right: 2vw;
-    font-size: 1.75vw;
-    background-color: rgb(193, 249, 214);
+    font-size: 1.25vw;
+    background-color: EABEC3;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
     width: 100vw;
 
@@ -483,6 +999,7 @@ img {
     alt: "LinkedIn Logo";
     width: 2.5vw;
     height: auto;
+    
 }
 
 #gthb{
@@ -497,43 +1014,71 @@ img {
     height: auto;
 }
 
-#service{
+/*#service{
     width: 55%;
     align-content: center;
     align-self: center;
     text-align: center;
     place-items: center;
     margin:auto;
-}
+}*/
 
 #SECLogo{
     alt: "SEC Logo";
     width: 23vw;
     height: auto;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
 }
 
 #RylliesLogo{
     alt: "Ryllies Logo";
-    width: 18vw;
+    width: 30vw;
     height: auto;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+    margin-right: 4vw;
 }
 
 #FishCampLogo{
     alt: "Fish Camp Logo";
-    width: 18vw;
+    width: 23vw;
     height: auto;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+    margin-right: 4vw;
+    margin-left: -4.5vw;
 }
 
 #BigEventLogo{
     alt: "Big Event Logo";
     width: 20vw;
     height: auto;
+    width: 23vw;
+    height: auto;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+    margin-right: 4vw;
+    margin-left: -2vw;
 }
 
 #FORMELogo{
     alt: "FORME Logo";
-    width: 18vw;
+    width: 23vw;
     height: auto;
+    background-color: EABEC3;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+    margin-right: 4vw;
 }
 
 #resume{
@@ -543,7 +1088,7 @@ img {
     justify-content: center;
     margin: auto;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
 
 }
@@ -557,9 +1102,9 @@ img {
     margin:auto;
     margin-top: 5vw;
     border-style: ridge;
-    border-color: black;
+    border-color: E6BD37;
     border-width: 2vw;
-    background-color: rgb(193, 249, 214);
+    background-color: EABEC3;
 
 }
 
@@ -608,7 +1153,7 @@ img {
 }
       
 .checkbox:checked + .toggle {
-    background-color: rgb(189, 221, 247);
+    background-color: EABEC3;
 }
       
 .checkbox { 
@@ -617,4 +1162,16 @@ img {
 
 #link{
     text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+    border-style: ridge;
+    border-color: E6BD37;
+    border-width: 2vw;
+    background-color: EABEC3;
+    margin-left: 3vw;
+}
+
+#linkInsta{
+    text-decoration: underline;
+
 }
